@@ -12,7 +12,7 @@ export class EducationComponent {
       degree: 'Bachelor of Computer Applications (BCA) 🎓',
       institution: 'Kolhan University',
       period: '2017 📅 2020',
-      gpa: '80.97%',
+      percentage: '80.97%',
       highlights: [
         'Focused on Java programming, Data Structures, DBMS, Operating Systems, and Computer Networks.',
         'Developed a strong foundation in software engineering and application development.',
