@@ -1,0 +1,235 @@
+.page {
+  display: none;
+}
+
+@media print {
+
+  .page {
+    display: block;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 10.5pt;
+    color: #111;
+    line-height: 1.45;
+    padding: 0.5in 0.6in;
+    max-width: 100%;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #1a56a0;
+  }
+
+  .pName {
+    font-size: 22pt;
+    font-weight: 700;
+    color: #1a56a0;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+
+  .pRole {
+    font-size: 11pt;
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .contact {
+    font-size: 9pt;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .sep {
+    color: #aaa;
+  }
+
+  .socialLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .socialLink svg {
+    flex-shrink: 0;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .section {
+    margin-bottom: 14px;
+    padding: 0;
+  }
+
+  .sectionTitle {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #1a56a0;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 1px solid #1a56a0;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+    break-after: avoid;
+  }
+
+  .summary {
+    color: #333;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+
+  .job {
+    margin-bottom: 12px;
+  }
+
+  .jobHeader {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+  .jobCompany {
+    font-weight: 700;
+    font-size: 10.5pt;
+    color: #111;
+  }
+
+  .jobRole {
+    font-size: 9.5pt;
+    color: #444;
+  }
+
+  .jobRole::before {
+    content: '•';
+    margin-right: 6px;
+    color: #999;
+  }
+
+  .jobPeriod {
+    font-size: 9pt;
+    color: #666;
+    margin-left: auto;
+  }
+
+  .project {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .projectHeader {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  .clientName {
+    font-weight: 600;
+    font-size: 9.5pt;
+    color: #1a56a0;
+  }
+
+  .projectPeriod {
+    font-size: 8.5pt;
+    color: #666;
+  }
+
+  .bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 4px 0;
+  }
+
+  .bullets li {
+    font-size: 9pt;
+    color: #333;
+    padding-left: 12px;
+    position: relative;
+    margin-bottom: 2px;
+    line-height: 1.4;
+  }
+
+  .bullets li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: #1a56a0;
+    font-size: 8pt;
+  }
+
+  .techLine {
+    font-size: 8.5pt;
+    color: #555;
+    margin-top: 3px;
+  }
+
+  .eduRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .eduDegree {
+    font-weight: 600;
+    font-size: 9.5pt;
+    color: #111;
+  }
+
+  .eduInst {
+    font-size: 9.5pt;
+    color: #444;
+  }
+
+  .eduMeta {
+    font-size: 8.5pt;
+    color: #666;
+  }
+
+  .certRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  .certName {
+    font-size: 9.5pt;
+    font-weight: 500;
+    color: #111;
+  }
+
+  .certMeta {
+    font-size: 8.5pt;
+    color: #666;
+  }
+
+  .skillRow {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 4px;
+    font-size: 9pt;
+    line-height: 1.4;
+  }
+
+  .skillLabel {
+    font-weight: 700;
+    color: #1a56a0;
+    white-space: nowrap;
+    min-width: 90px;
+  }
+
+  .skillItems {
+    color: #333;
+  }
+}

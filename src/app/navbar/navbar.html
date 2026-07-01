@@ -1,0 +1,21 @@
+<nav class="nav no-print" [class.scrolled]="scrolled">
+  <div class="inner">
+    <ul class="links" [class.open]="menuOpen">
+      @for (link of links; track link) {
+        <li>
+          <a [href]="'#' + link.toLowerCase()" (click)="closeMenu()">{{ link }}</a>
+        </li>
+      }
+
+      <li>
+        <button class="resumeBtn" (click)="printResume()">Resume PDF</button>
+      </li>
+    </ul>
+
+    <button class="burger" (click)="toggleMenu()" aria-label="Toggle menu">
+      <span [class.barOpen]="menuOpen"></span>
+      <span [class.barHide]="menuOpen"></span>
+      <span [class.barOpen2]="menuOpen"></span>
+    </button>
+  </div>
+</nav>

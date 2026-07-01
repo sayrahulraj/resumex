@@ -1,0 +1,29 @@
+<section id="skills" class="section skillsBg">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="num">02.</span>
+      <h2>Skills</h2>
+    </div>
+
+    <div class="grid">
+      @for (cat of categories; track cat.title) {
+        <div class="card cat">
+
+          <div class="catHeader">
+            <span class="icon">{{ cat.icon }}</span>
+            <h3 class="catTitle">{{ cat.title }}</h3>
+          </div>
+
+          <div class="tags">
+            @for (s of cat.skills; track s) {
+              <span class="tag skill">{{ s }}</span>
+            }
+          </div>
+
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

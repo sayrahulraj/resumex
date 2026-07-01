@@ -1,0 +1,118 @@
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 48px;
+    align-items: start;
+}
+
+.subHeading {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+}
+
+.degreeCard {
+    padding: 28px;
+}
+
+.degreeTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.degree {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.institution {
+    font-size: 0.9rem;
+    color: var(--accent-cyan);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.period {
+    font-family: 'Courier New', monospace;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.gpa {
+    font-family: 'Courier New', monospace;
+    font-size: 0.82rem;
+    color: var(--accent-green);
+}
+
+.highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.highlights li {
+    display: flex;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.arrow {
+    color: var(--accent-cyan);
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    margin-top: 3px;
+}
+
+.certs {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.certCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+}
+
+.certBadge {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.certName {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.certMeta {
+    font-size: 0.8rem;
+    font-family: 'Courier New', monospace;
+    color: var(--text-muted);
+}
+
+@media (max-width: 860px) {
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}

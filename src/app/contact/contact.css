@@ -1,0 +1,92 @@
+.contactSection {
+    background: linear-gradient(
+        180deg,
+        var(--bg-primary) 0%,
+        var(--bg-secondary) 100%
+    );
+}
+
+.inner {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.pre {
+    font-family: 'Courier New', monospace;
+    color: var(--accent-cyan);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.body {
+    color: var(--text-secondary);
+    font-size: 1.02rem;
+    line-height: 1.75;
+    margin-bottom: 40px;
+}
+
+.mailBtn {
+    display: inline-block;
+    padding: 16px 40px;
+    border: 1px solid var(--accent-cyan);
+    border-radius: 999px;
+}
+
+.mailBtn:hover {
+    background: rgba(0, 212, 255, 0.1);
+    box-shadow: 0 0 24px rgba(0, 212, 255, 0.2);
+    color: var(--accent-cyan);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.socials a {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.socials a:hover {
+    color: var(--accent-cyan);
+}
+
+.dot {
+    color: var(--text-muted);
+}
+
+.footer {
+    border-top: 1px solid rgba(0, 212, 255, 0.08);
+    padding: 28px;
+    text-align: center;
+}
+
+.footerText {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.footerName {
+    color: var(--accent-cyan);
+}
+
+.footerSub {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    opacity: 0.6;
+    font-family: 'Courier New', monospace;
+}

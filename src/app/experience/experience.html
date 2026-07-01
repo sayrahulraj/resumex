@@ -1,0 +1,66 @@
+<section id="experience" class="section">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="num">03.</span>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="layout">
+
+      <div class="tabs">
+        @for (job of jobs; track job.company; let i = $index) {
+          <button
+            class="tab"
+            [class.activeTab]="active === i"
+            (click)="active = i"
+          >
+            <span class="tabCompany">{{ job.company }}</span>
+            <span class="tabRole">{{ job.period }}</span>
+          </button>
+        }
+      </div>
+
+      <div class="detail">
+
+        <div class="detailHeader">
+          <h3 class="role">{{ currentJob.role }}</h3>
+          <span class="at">&nbsp;&#64; {{ currentJob.company }}</span>
+        </div>
+
+        <p class="meta">{{ currentJob.period }} · {{ currentJob.location }}</p>
+
+        @for (p of currentJob.projects; track p.client) {
+          <div class="project">
+
+            <div class="projectHeader">
+              <span class="clientName">{{ p.client }}</span>
+
+              @if (p.clientLocation) {
+                <span class="clientLoc">{{ p.clientLocation }}</span>
+              }
+
+              <span class="projectPeriod">{{ p.period }}</span>
+            </div>
+
+            <ul class="bullets">
+              @for (h of p.highlights; track h) {
+                <li><span class="arrow">></span>{{ h }}</li>
+              }
+            </ul>
+
+            <div class="techRow">
+              @for (t of p.tech; track t) {
+                <span class="tag">{{ t }}</span>
+              }
+            </div>
+
+          </div>
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

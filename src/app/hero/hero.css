@@ -1,0 +1,127 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner {
+  padding-top: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.greeting {
+  font-family: 'Courier New', monospace;
+  color: var(--accent-cyan);
+  font-size: 1rem;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.name {
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.role {
+  font-size: clamp(1.3rem, 4vw, 2.4rem);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  max-width: 680px;
+}
+
+.highlight {
+  color: var(--accent-cyan);
+}
+
+.bio {
+  max-width: 560px;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.btnPrimary {
+  padding: 14px 32px;
+  background: transparent;
+  border: 1px solid var(--accent-cyan);
+  border-radius: var(--radius);
+  color: var(--accent-cyan);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btnPrimary:hover {
+  background: rgba(0,212,255,0.1);
+  box-shadow: 0 0 20px rgba(0,212,255,0.25);
+  color: var(--accent-cyan);
+}
+
+.btnSecondary {
+  padding: 14px 32px;
+  background: rgba(0,212,255,0.06);
+  border: 1px solid rgba(0,212,255,0.15);
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btnSecondary:hover {
+  border-color: rgba(0,212,255,0.4);
+  color: var(--text-primary);
+}
+
+.techBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  padding: 6px 14px;
+  background: rgba(0,212,255,0.06);
+  border: 1px solid rgba(0,212,255,0.15);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-family: 'Courier New', monospace;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
+}
+
+.glow {
+  position: absolute;
+  top: 20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,212,255,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}

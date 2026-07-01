@@ -1,0 +1,130 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 0;
+  transition: background 0.3s, padding 0.3s, box-shadow 0.3s;
+}
+
+.scrolled {
+  background: rgba(9,13,27,0.92);
+  backdrop-filter: blur(12px);
+  padding: 12px 0;
+  box-shadow: 0 1px 0 rgba(0,212,255,0.08);
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.links a {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: var(--accent-cyan);
+}
+
+.resumeBtn {
+  padding: 8px 18px;
+  border: 1px solid var(--accent-cyan);
+  border-radius: var(--radius);
+  color: var(--accent-cyan);
+  font-size: 0.88rem;
+  font-family: inherit;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.resumeBtn:hover {
+  background: rgba(0,212,255,0.08);
+  box-shadow: 0 0 12px rgba(0,212,255,0.2);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.barOpen {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.barHide {
+  opacity: 0;
+}
+
+.barOpen2 {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .links {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(9,13,27,0.97);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    gap: 0;
+    padding: 24px 0 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .links a {
+    display: block;
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+
+  .resumeBtn {
+    display: inline-block;
+    margin-top: 8px;
+  }
+}

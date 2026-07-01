@@ -1,0 +1,145 @@
+:root {
+  --bg-primary: #090d1b;
+  --bg-secondary: #0d1225;
+  --bg-card: #111827;
+  --accent-cyan: #00d4ff;
+  --accent-green: #00ff88;
+  --accent-purple: #a855f7;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  --border: rgba(0, 212, 255, 0.12);
+  --border-hover: rgba(0, 212, 255, 0.4);
+  --glow-cyan: 0 0 24px rgba(0, 212, 255, 0.18);
+  --radius: 8px;
+  --radius-lg: 14px;
+
+  font-family: 'Segoe UI', 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-green);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.section {
+  padding: 88px 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 52px;
+}
+
+.section-header .num {
+  font-family: 'Courier New', monospace;
+  color: var(--accent-cyan);
+  font-size: 1rem;
+}
+
+.section-header h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.section-header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(0,212,255,0.3), transparent);
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 11px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: rgba(0,212,255,0.08);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0,212,255,0.2);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--glow-cyan);
+  transform: translateY(-3px);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0,212,255,0.4);
+  border-radius: 3px;
+}
+
+@media print {
+  @page {
+    margin: 0;
+    size: A4;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

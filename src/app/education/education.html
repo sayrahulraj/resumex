@@ -1,0 +1,65 @@
+<section id="education" class="section">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="num">05.</span>
+      <h2>Education &amp; Certifications</h2>
+    </div>
+
+    <div class="layout">
+
+      <div>
+        <h3 class="subHeading">Degrees</h3>
+
+        @for (d of degrees; track d.degree) {
+          <div class="card degreeCard">
+
+            <div class="degreeTop">
+              <div>
+                <h4 class="degree">{{ d.degree }}</h4>
+                <p class="institution">{{ d.institution }}</p>
+              </div>
+
+              <div class="right">
+                <span class="period">{{ d.period }}</span>
+                <span class="gpa">GPA {{ d.gpa }}</span>
+              </div>
+            </div>
+
+            <ul class="highlights">
+              @for (h of d.highlights; track h) {
+                <li>
+                  <span class="arrow">></span>{{ h }}
+                </li>
+              }
+            </ul>
+
+          </div>
+        }
+
+      </div>
+
+      <div>
+        <h3 class="subHeading">Certifications</h3>
+
+        <div class="certs">
+          @for (c of certifications; track c.name) {
+            <div class="card certCard">
+
+              <span class="certBadge">{{ c.badge }}</span>
+
+              <div>
+                <h4 class="certName">{{ c.name }}</h4>
+                <p class="certMeta">{{ c.issuer }} · {{ c.year }}</p>
+              </div>
+
+            </div>
+          }
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
