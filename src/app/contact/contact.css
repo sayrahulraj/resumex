@@ -39,6 +39,7 @@
     padding: 16px 40px;
     border: 1px solid var(--accent-cyan);
     border-radius: 999px;
+    margin-bottom: 10px;
 }
 
 .mailBtn:hover {
